@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Austin Wiant
+    Assignment 9.3
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var wordOne = "yellow";
+        var wordTwo = "diverged";
+        var wordThree = "traveler";
+        var wordFour = "difference";
+    </script>
+</head>
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <p>Two roads <span id="wordTwo">__________</span> in a <span id="wordOne">__________</span> wood,</p>
+    <p>And sorry I could not travel both and be one <span id="wordThree">__________</span>, long I stood</p>
+    <p>I took the one less traveled by, and that has made all the <span id="wordFour">__________</span>.</p>
+
+    <p>
+        <button type="button" onclick="document.getElementById('wordTwo').innerHTML = wordTwo">Reveal 1</button><br>
+        <button type="button" onclick="document.getElementById('wordOne').innerHTML = wordOne">Reveal 2</button><br>
+        <button type="button" onclick="document.getElementById('wordThree').innerHTML = wordThree">Reveal 3</button><br>
+        <button type="button" onclick="document.getElementById('wordFour').innerHTML = wordFour">Reveal 4</button>
+    </p>
+</body>
+</html>
+
+
