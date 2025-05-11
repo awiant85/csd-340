@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="wiant_Mod11_2.css">
+  <script>
+    let items = [];
+
+    function addItem() {
+      const input = document.getElementById("input").value;
+      if (input) {
+        items.push(input);
+        alert(`Added: "${input}" at position ${items.length}`);
+        document.getElementById("input").value = "";
+      }
+    }
+
+    function deleteItem() {
+      if (items.length > 0) {
+        alert(`Removed: "${items.pop()}"`);
+      } else {
+        alert("No items to delete.");
+      }
+    }
+
+    function showItems() {
+      const output = document.getElementById("output");
+      output.innerHTML = "";
+      items.forEach((item, i) => {
+        output.innerHTML += `${i + 1}. ${item}<br>`;
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+  <input id="input" type="text" placeholder="Type something">
+  <button onclick="addItem()">Add</button>
+  <button onclick="deleteItem()">Delete Last Entry</button>
+  <button onclick="showItems()">Display</button>
+
+  <div id="output" style="margin-top: 15px;"></div>
+</body>
+</html>
+<link rel="stylesheet" href="wiant_Mod11_2.css">
