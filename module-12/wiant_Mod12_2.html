@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="wiant_Mod12_2.css">
+  <script>
+    const books = [
+      "Project Hail Mary",
+      "Harry Potter",
+      "The Fault in Our Stars",
+      "Divergent",
+      "The Hobbit",
+      "Maze Runner",
+      "Dune",
+      "Narnia",
+      "Abigail Take Five",
+      "Lord of the Rings"
+    ];
+
+    function displayTopToBottom() {
+      let sorted = [...books].sort();
+      document.getElementById("bookList").innerHTML = sorted.map(book => `<li>${book}</li>`).join('');
+    }
+
+    function displayBottomToTop() {
+      let sorted = [...books].sort().reverse();
+      document.getElementById("bookList").innerHTML = sorted.map(book => `<li>${book}</li>`).join('');
+    }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div class="side-by-side">
+      <div class="left-div">
+        <h3>Top 10 Favorite Books</h3>
+        <ol id="bookList">
+      
+        </ol>
+        <button onclick="displayTopToBottom()">Top to Bottom</button>
+        <button onclick="displayBottomToTop()">Bottom to Top</button>
+      </div>
+
+      <div class="right-div">
+        <h3>5 Things I've Learned Since the Course Started</h3>
+        <ul>
+          <li>How to create a landing page</li>
+          <li>How to create lists in HTML</li>
+          <li>How to link files to HTML</li>
+          <li>How to use repositories/directories</li>
+          <li>How to change the width in CSS</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottom-link">
+      <a href="../index.html">back to Landing Page</a>
+    </div>
+  </div>
+</body>
+</html>
